@@ -1,0 +1,407 @@
+.cards {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    max-width: 300px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cards img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.cards-title {
+    color: #333;
+    margin: 8px 0;
+    font-size: 1.5rem;
+}
+
+.card-role {
+    color: #666;
+    margin: 4px 0;
+    font-size: 1rem;
+}
+/* Container styling */
+.colour-picker-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Colour preview box */
+.colour_picker_box {
+  width: 100%;
+  height: 150px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  margin-bottom: 15px;
+  transition: background 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text inside the color box */
+.coourpicked {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Label */
+.select-colour {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Color input */
+.input {
+  width: 80px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Remove default color picker styles for better appearance (optional) */
+.input::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 6px;
+}
+
+.input::-webkit-color-swatch {
+  border: none;
+  border-radius: 6px;
+}
+/* index.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.todobox {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.titleoftodo {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: capitalize;
+}
+
+.inputofactivity {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.inputofactivity:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+.inputofactivity::placeholder {
+  color: #a0a4a8;
+}
+
+.addactivity {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.addactivity:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.addactivity:active {
+  transform: translateY(-1px);
+}
+
+.errormessage {
+  color: #e74c3c;
+  text-align: center;
+  font-weight: 500;
+  margin: 15px 0;
+  padding: 10px;
+  background: #ffeaea;
+  border-radius: 8px;
+  border-left: 4px solid #e74c3c;
+}
+
+div:has(> .liofevent) {
+  margin-top: 30px;
+}
+
+.liofevent {
+  background: white;
+  border: 2px solid #f1f3f4;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  list-style: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.liofevent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.liofevent::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.liofevent:hover::before {
+  opacity: 1;
+}
+
+.liofevent:last-child {
+  margin-bottom: 0;
+}
+
+/* Completed task styling */
+.liofevent:has(+ .liofevent) {
+  border-bottom: 2px solid #f1f3f4;
+}
+
+.liofevent span:first-child {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.liofevent span:nth-child(2) {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+/* Status indicator for completed tasks */
+.liofevent:has(> :last-child:contains('done')) {
+  background: #f8fff8;
+  border-color: #2ecc71;
+}
+
+.liofevent:has(> :last-child:contains('done'))::after {
+  content: '✅ Completed';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #2ecc71;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* For browsers that don't support :has with contains, we'll use a different approach */
+.liofevent .completed-status {
+  display: none;
+}
+
+.liofevent[data-completed="true"] {
+  background: #f8fff8;
+  border-color: #2ecc71;
+  opacity: 0.8;
+}
+
+.liofevent[data-completed="true"]::after {
+  content: '✅ Completed';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #2ecc71;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.eventclicker {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+}
+
+.eventclicker:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* Update your JSX to use data attributes for better CSS targeting */
+/* Add this to your li element: data-completed={element.completed} */
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .todobox {
+    padding: 25px;
+    border-radius: 15px;
+  }
+  
+  .titleoftodo {
+    font-size: 2rem;
+  }
+  
+  .inputofactivity {
+    padding: 12px 15px;
+  }
+  
+  .addactivity {
+    padding: 12px;
+  }
+  
+  .liofevent {
+    padding: 15px;
+  }
+  
+  .eventclicker {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .todobox {
+    padding: 20px 15px;
+  }
+  
+  .titleoftodo {
+    font-size: 1.8rem;
+  }
+}
+
+/* Animation for new items */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.liofevent {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Custom scrollbar for the list container */
+div:has(> .liofevent) {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+div:has(> .liofevent)::-webkit-scrollbar {
+  width: 6px;
+}
+
+div:has(> .liofevent)::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+div:has(> .liofevent)::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+div:has(> .liofevent)::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8, #6a4190);
+}
