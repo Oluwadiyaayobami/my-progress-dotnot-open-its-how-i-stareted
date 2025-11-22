@@ -13,7 +13,7 @@ function Todolist(){
         }
         else{
         errormessage.textContent = ''
-        let now  = Date.now()
+        let now = Date.now()
         const newdate = new Date(now).toLocaleString();
 
         let newtask  = {date : newdate , activity :activityss, completed :false }
@@ -48,3 +48,11 @@ function Todolist(){
 
 }
 export default Todolist
+
+// let now = Date.now()
+// let newdate  = new Date (now).toLocaleString()
+// console.log(newdate)
+
+///////// or ///////
+// let newdate  = new Date ().toLocaleString()
+// console.log(newdate)
