@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import  "./index.css"
 
 function Todolist(){
-    const [activity, setactivity] = useState( [])
+    const [activity, setactivity] = useState([])
 
     const addnewquest = () => {
         let activityss = document.getElementById('task').value
