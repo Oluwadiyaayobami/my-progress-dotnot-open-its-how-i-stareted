@@ -21,7 +21,7 @@ function Todolist(){
         document.getElementById('task').value = ''
         }
     }
-    
+
     const handlecomplication = (index) => {
         const updatedActivities = [...activity];
         updatedActivities[index].completed = true;
@@ -30,6 +30,11 @@ function Todolist(){
         
 
     };
+    const deletetask = (index) => {
+      setactivity((a) => a.filter((element,i) => i !== index ))
+    } 
+    // to delete something u pass the index of what u want to delete and get the index of it send the index to your function and filter note filter accept two variable eelemet and index so u take the i of the filter if its not eual to the index u leav it and the one equal to the index remove it 
+
 
 
     return (
@@ -40,7 +45,7 @@ function Todolist(){
             <p id="error" className="errormessage"></p>
 
             <div>
-                {activity.map((element,index) => (<li className="liofevent" key={index}><span>{element.date}</span> <span>{element.activity}</span> <span>{element.completed ? 'status: done' : '' }</span><span>{!element.completed &&(<button className="eventclicker" onClick={() => handlecomplication(index)}  id="button" key={index}>Are you done? </button>)}</span></li>)) }
+                {activity.map((element,index) => (<li className="liofevent" key={index}><span>{element.date}</span> <span>{element.activity}</span> <span>{element.completed ? 'status: done' : '' }</span><span>{!element.completed &&(<button className="eventclicker" onClick={() => handlecomplication(index)}  id="button" key={index}>Are you done? </button>)}<span><button onClick={()=>deletetask(index)} className="deletbtn">Delete</button></span></span></li>)) }
             </div>
 
         </div>

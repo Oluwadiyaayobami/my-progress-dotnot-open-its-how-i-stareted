@@ -1,33 +1,60 @@
+/* ===== RESET & GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* ===== CARD COMPONENT STYLES ===== */
 .cards {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    text-align: center;
-    max-width: 300px;
-    margin: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  max-width: 300px;
+  margin: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .cards img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 12px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 3px solid #667eea;
 }
 
 .cards-title {
-    color: #333;
-    margin: 8px 0;
-    font-size: 1.5rem;
+  color: #333;
+  margin: 8px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .card-role {
-    color: #666;
-    margin: 4px 0;
-    font-size: 1rem;
+  color: #666;
+  margin: 4px 0;
+  font-size: 1rem;
+  font-weight: 500;
 }
-/* Container styling */
+
+/* ===== COLOUR PICKER STYLES ===== */
 .colour-picker-container {
   max-width: 400px;
   margin: 40px auto;
@@ -39,7 +66,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Title */
 .title {
   font-size: 1.6rem;
   font-weight: 600;
@@ -47,7 +73,6 @@
   color: #333;
 }
 
-/* Colour preview box */
 .colour_picker_box {
   width: 100%;
   height: 150px;
@@ -60,7 +85,6 @@
   align-items: center;
 }
 
-/* Text inside the color box */
 .coourpicked {
   font-size: 1rem;
   font-weight: 500;
@@ -68,7 +92,6 @@
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-/* Label */
 .select-colour {
   display: block;
   margin-bottom: 10px;
@@ -76,7 +99,6 @@
   color: #444;
 }
 
-/* Color input */
 .input {
   width: 80px;
   height: 40px;
@@ -86,7 +108,6 @@
   outline: none;
 }
 
-/* Remove default color picker styles for better appearance (optional) */
 .input::-webkit-color-swatch-wrapper {
   padding: 0;
   border-radius: 6px;
@@ -96,21 +117,8 @@
   border: none;
   border-radius: 6px;
 }
-/* index.css */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
-  padding: 20px;
-}
-
+/* ===== TODO LIST STYLES ===== */
 .todobox {
   max-width: 800px;
   margin: 0 auto;
@@ -192,6 +200,7 @@ body {
   border-left: 4px solid #e74c3c;
 }
 
+/* ===== TODO LIST ITEMS ===== */
 div:has(> .liofevent) {
   margin-top: 30px;
 }
@@ -209,6 +218,7 @@ div:has(> .liofevent) {
   gap: 12px;
   position: relative;
   overflow: hidden;
+  animation: slideIn 0.3s ease-out;
 }
 
 .liofevent:hover {
@@ -237,11 +247,6 @@ div:has(> .liofevent) {
   margin-bottom: 0;
 }
 
-/* Completed task styling */
-.liofevent:has(+ .liofevent) {
-  border-bottom: 2px solid #f1f3f4;
-}
-
 .liofevent span:first-child {
   font-size: 0.85rem;
   color: #666;
@@ -255,30 +260,7 @@ div:has(> .liofevent) {
   flex-grow: 1;
 }
 
-/* Status indicator for completed tasks */
-.liofevent:has(> :last-child:contains('done')) {
-  background: #f8fff8;
-  border-color: #2ecc71;
-}
-
-.liofevent:has(> :last-child:contains('done'))::after {
-  content: '✅ Completed';
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #2ecc71;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-/* For browsers that don't support :has with contains, we'll use a different approach */
-.liofevent .completed-status {
-  display: none;
-}
-
+/* Completed task styling */
 .liofevent[data-completed="true"] {
   background: #f8fff8;
   border-color: #2ecc71;
@@ -298,6 +280,7 @@ div:has(> .liofevent) {
   font-weight: 600;
 }
 
+/* ===== BUTTON STYLES ===== */
 .eventclicker {
   align-self: flex-start;
   background: linear-gradient(135deg, #ff6b6b, #ee5a24);
@@ -319,10 +302,115 @@ div:has(> .liofevent) {
   box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
 }
 
-/* Update your JSX to use data attributes for better CSS targeting */
-/* Add this to your li element: data-completed={element.completed} */
+/* ===== DELETE BUTTON STYLES ===== */
+.deletbtn {
+  background: linear-gradient(135deg, #ff6b6b, #e74c3c);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 10px;
+  position: relative;
+  overflow: hidden;
+}
 
-/* Responsive design */
+.deletbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+  background: linear-gradient(135deg, #ff8e8e, #e74c3c);
+}
+
+.deletbtn:active {
+  transform: translateY(0);
+}
+
+.deletbtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.deletbtn:hover::before {
+  left: 100%;
+}
+
+/* Task actions container */
+.task-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.completed-badge {
+  color: #2ecc71;
+  font-weight: 600;
+  padding: 5px 10px;
+  background: #f8fff8;
+  border-radius: 15px;
+  border: 1px solid #2ecc71;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+.deletbtn:focus {
+  animation: shake 0.3s ease-in-out;
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+div:has(> .liofevent) {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+div:has(> .liofevent)::-webkit-scrollbar {
+  width: 6px;
+}
+
+div:has(> .liofevent)::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+div:has(> .liofevent)::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+div:has(> .liofevent)::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8, #6a4190);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   body {
     padding: 10px;
@@ -349,9 +437,26 @@ div:has(> .liofevent) {
     padding: 15px;
   }
   
-  .eventclicker {
+  .eventclicker, .deletbtn {
     width: 100%;
     text-align: center;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  
+  .task-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .cards {
+    margin: 10px;
+    max-width: 100%;
+  }
+  
+  .colour-picker-container {
+    margin: 20px auto;
+    padding: 15px;
   }
 }
 
@@ -363,45 +468,37 @@ div:has(> .liofevent) {
   .titleoftodo {
     font-size: 1.8rem;
   }
-}
-
-/* Animation for new items */
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+  
+  .cards-title {
+    font-size: 1.3rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .title {
+    font-size: 1.4rem;
   }
 }
 
-.liofevent {
-  animation: slideIn 0.3s ease-out;
+/* ===== UTILITY CLASSES ===== */
+.text-center {
+  text-align: center;
 }
 
-/* Custom scrollbar for the list container */
-div:has(> .liofevent) {
-  max-height: 60vh;
-  overflow-y: auto;
-  padding-right: 10px;
+.mt-20 {
+  margin-top: 20px;
 }
 
-div:has(> .liofevent)::-webkit-scrollbar {
-  width: 6px;
+.mb-20 {
+  margin-bottom: 20px;
 }
 
-div:has(> .liofevent)::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
+.flex {
+  display: flex;
 }
 
-div:has(> .liofevent)::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  border-radius: 10px;
+.justify-center {
+  justify-content: center;
 }
 
-div:has(> .liofevent)::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #5a6fd8, #6a4190);
+.items-center {
+  align-items: center;
 }
