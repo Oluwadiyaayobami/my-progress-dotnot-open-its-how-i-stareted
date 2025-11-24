@@ -1,11 +1,12 @@
-import Todolist from "./todolist"
+import Myclock from "./clock"
 
 function App() {
 
 
   return (
     <div>
-      <Todolist></Todolist>
+      <Myclock></Myclock>
+      
 
       
 
