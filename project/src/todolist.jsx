@@ -1,7 +1,10 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import  "./index.css"
 
 function Todolist(){
+
+
+
     const [activity, setactivity] = useState([])
 
     const addnewquest = () => {
@@ -30,6 +33,10 @@ function Todolist(){
         
 
     };
+    useEffect(() => {
+        document.title = `my to do list`
+    },[activity])
+    // useefeect is used to to add aditional instruction to to a react code baicaly what it does is that u can pass a function when the state of the code change or u can pass it once or every thime something changes 
     const deletetask = (index) => {
       setactivity((a) => a.filter((element,i) => i !== index ))
     } 
