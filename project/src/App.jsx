@@ -1,11 +1,10 @@
-import Myclock from "./clock"
-
+import ComponetA from "./componetA"
 function App() {
 
 
   return (
     <div>
-      <Myclock></Myclock>
+      <ComponetA></ComponetA>
       
 
       
