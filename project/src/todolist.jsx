@@ -68,3 +68,6 @@ export default Todolist
 ///////// or ///////
 // let newdate  = new Date ().toLocaleString()
 // console.log(newdate)
+
+
+// use contest is a unique way to replace the usage of props u hvae a set componet and a consumer componet 
